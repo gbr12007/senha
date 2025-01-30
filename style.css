@@ -6,10 +6,10 @@ body{
     flex-direction: column;
 }
 .mostrar{
-    width: 150px;
+    width: 650px;
     height: 150px;
     display: flex;
     align-items: center;
-    font-size: 40px;
+    font-size: 25px;
     justify-content: center;
 }

@@ -11,14 +11,20 @@ function mostrar(){
 }
 
 function trocar(){
-    let alphabet = 'ABCDEFGHIJKLMNOPRQSTUVWXYZ';
+    let alphabet = `ABCDEFGHIJKLMNOPRQSTUVWXYZ!@#$%¨&*()""`;
     var tamanho = input.value.toUpperCase();
     resultado = [];
     for(let i=0; i<tamanho.length; i++){
         var index = alphabet.indexOf(tamanho[i]);
-        resultado[i] = Number(index) + 1;
+        if(index >= 9){
+            let arm = (Number(index) + 1).toString();
+            let trocando = `!${arm}!`;
+            resultado[i] = trocando;
+        }else{
+            resultado[i] = Number(index) + 1;
+        }  
+        
     }
-    
 }
 
 btn.addEventListener('click', (e)=>{
@@ -26,3 +32,7 @@ btn.addEventListener('click', (e)=>{
     trocar();
     mostrar();
 });
+
+function numerosDecimais(){
+    
+}
